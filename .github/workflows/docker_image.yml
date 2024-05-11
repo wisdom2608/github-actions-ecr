@@ -35,8 +35,8 @@ jobs:
         ECR_REPOSITORY: github_ecr
         IMAGE_TAG: latest
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
 #Refeerence: https://youtu.be/6O-7zb-igUs?si=yBtGJu-eD3f8MRRf  
 #Reference 1: https://youtu.be/yv8-Si5AB3U?si=8VVBFVtBXH5DqVE7

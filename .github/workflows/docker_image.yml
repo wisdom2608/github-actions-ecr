@@ -30,7 +30,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
       
     - id: docker-tag
-      uses: yuyatakeyama/docker-tag-from-github-ref-action@v1
+      uses: yuya-takeyama/docker-tag-from-github-ref-action@v1
     
     - name: Build, tag, and push image to Amazon ECR
       env:

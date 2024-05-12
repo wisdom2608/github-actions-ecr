@@ -1,2 +1,2 @@
 # github-ecr
-Build and push Docker Image to ECR using github actions
+Build and push a Docker Image to ECR using github actions

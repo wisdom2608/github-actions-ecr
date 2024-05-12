@@ -36,8 +36,8 @@ jobs:
         registries: |
           docker.io
           ghcr.io
-          quay.io
-            
+          quay.io            
+           
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}

@@ -58,3 +58,29 @@ jobs:
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         
+          ##Prerequisite
+# 1) Create a github Account
+# - a) Create  a repository in Github.
+# 2 Create an AWS Account
+# - a) Create an AWS ECR repository in your AWS account.
+# - b) Create an IAM user in your WAS account.  
+# - C) Generate "AWS Access Key ID" and "AWS Secret Access Key for the User" and save in a save location. 
+
+# 3) Create secrets in github repository. These secrets serve as evnironment variables in the workflows file. 
+#    For environment variables, put the:
+# - a) value of AWS_ACCESS_KEY_ID as the IAM user AWS Access Key ID.
+# - b) value of AWS_SECRETE_ACCESS_KEY as IAM user AWS Secret Access Key. 
+# - c) value of AWS_ECR_REGION as the Region of your AWS account. 
+
+# 4) The version bash files, "version.sh and version2.sh" are version files used for image tag. 
+# - Any of the versions provides a very short image-tag to the image built and pushed to the AWS ECR repository. 
+# - These two version files CANNOT be at once. Only one of them should be used in the workflows file.
+# - For "version.sh", the version number parts are 'major', 'minor', and 'patch'.
+# - For "version2.sh", the version number parts are 'Release', 'Hotfix', and 'Patch'.
+
+# NB: Remember to change the version number part anytime you update your workflows. If the last version number part was...
+#...'major', then the new one should be 'minor' or 'patch', if your are using "version.sh". If you are using "version2.sh",...
+#...you should be using 'Release', or 'Hotfix', or 'Patch' for version number part. All depends on you.
+
+                                                    #GOOD LUCK !!!
+
